@@ -1,0 +1,12 @@
+header {
+    border-bottom: 1px solid #000;
+    text-align: center;
+    background: $primaryColor;
+}
+
+footer {
+    text-align: center;
+    background: $secondaryColor;
+    color: $bgColor;
+    padding: 1% 0;
+}
