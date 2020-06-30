@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mood Soundtrack Generator</title>
+    <title>Beyond Bootcamp - Mood Soundtrack Generator</title>
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
@@ -29,17 +29,22 @@
                 your moment.
             </li>
         </ol>
-        <!-- Note: I used tabindex=0 on the li's to make it more accessible without the mouse, since li's were not giving me :focus effect as buttons. I was instructed by Joey how to use it and that it should have been used sparingly and carefully, because it can create issues with certain browsers. Because of running out of time, I've opted for this. In the near future, I plan to return to this project and include buttons instead of li's, in order to take advantage of the accessibility default of the button element. I'm aware of the risk, but it seems to be working fine in my project. -->
 
         <div class="dropdown">
-            <button class="dropbtn">Soundtrack Generator</button>
+            <button onclick="dropdownMenu()" class="dropbtn">Soundtrack Generator</button>
             <div id="myDropdown" class="dropdownContent">
-                <ul>
-                    <li id="rock" tabindex="0">I'm starting my day, I need a kick in the butt!!</li>
-                    <li id="latin" tabindex="0">I'm in love, gimme some sexy latin sugar, baby!</li>
-                    <li id="blues" tabindex="0">I feel like I'm lost in the desert. And my horse left me...</li>
-                    <li id="boogie" tabindex="0">My day is done, let's party like it's 1949!</li>
-                </ul>
+                <button class="songbtn" id="rock">
+                    I'm starting my day, I need a kick in the butt!!
+                </button>
+                <button class="songbtn" id="latin">
+                    I'm in love, gimme some sexy latin sugar, baby!
+                </button>
+                <button class="songbtn" id="blues">
+                    I feel like I'm lost in the desert. And my horse left me...
+                </button>
+                <button class="songbtn" id="boogie">
+                    My day is done, let's party like it's 1949!
+                </button>
             </div>
         </div>
 

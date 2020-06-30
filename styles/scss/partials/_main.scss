@@ -18,3 +18,64 @@ ol {
 #playlistResult {
     margin-top: 5%;
 }
+
+
+//DROPDOWN MENU
+/* Dropdown Button */
+.dropbtn {
+    width: 100%;
+    background: $primaryColor;
+    color: $bgColor;
+    padding: 3% 5%;
+    margin-top: 3%;
+    font-family: $mainFont;
+    font-size: 2.5vw;
+    font-weight: bold;
+    border: none;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background: $secondaryColor;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdownContent {
+    display: none;
+    // position: absolute; // it was commented out before!
+    background-color: $bgColor; 
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    // overflow: auto; // to enable scroll on small screens, DOUBLE CHECK THIS
+}
+
+/* Links inside the dropdown */
+.dropdownContent .songbtn  {
+    min-width: 100%;
+    display: block;
+    color: $primaryColor;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Links inside the dropdown on hover & focus */
+.dropdownContent .songbtn:hover,
+.dropdownContent .songbtn:focus {
+    background-color: #ddd;
+    border: 1 solid $secondaryColor;
+    cursor: pointer;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdownContent container when the user clicks on the dropdown button) */
+.show {
+    display:block;
+}

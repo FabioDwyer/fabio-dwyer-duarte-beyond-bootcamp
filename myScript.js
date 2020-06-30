@@ -1,15 +1,36 @@
-$(document).ready(function () {
+//  Dropdown Menu
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+const dropdownMenu = () => {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
-    // Dropdown Menu:
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = (event) => {
+    event.preventDefault();
+    if (!event.target.matches('.dropbtn')) {
+        const dropdowns = document.getElementsByClassName('dropdownContent');
 
-    $(window).on('click', function (event) {
-        event.preventDefault();
-        if (event.target.matches('.dropbtn')) {
-            $('#myDropdown').toggleClass('show'); // opens dropdown
-        } else {
-            $('#myDropdown').removeClass('show'); // closes dropdown
+        for (let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
         }
-    });
+    }
+}
+/*************************************************************************** */
+// New option - the onclick doesn't close outside the button!!
+// window.onclick = function (event) {
+//     event.preventDefault();
+//     const dropdowns = document.getElementById('myDropdown');
+    
+//         if (!event.target.matches('.dropbtn')) {
+//             dropdowns.toggleClass('show');
+//         } else {
+//             dropdowns.removeClass('show');
+//         }
+//     }
 
 
     // Audio:
@@ -92,4 +113,3 @@ $(document).ready(function () {
         boogieSong(true);
     });
 
-}); // End of document ready
