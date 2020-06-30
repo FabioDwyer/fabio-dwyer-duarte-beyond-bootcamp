@@ -19,7 +19,8 @@ window.onclick = (event) => {
         }
     }
 }
-/*************************************************************************** */
+
+
 // New option - the onclick doesn't close outside the button!!
 // window.onclick = function (event) {
 //     event.preventDefault();
@@ -33,6 +34,7 @@ window.onclick = (event) => {
 //     }
 
 
+/*************************************************************************** */
     // Audio:
     // Song #1
     function rockSong(autoplay) {

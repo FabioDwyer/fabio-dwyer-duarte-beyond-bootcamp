@@ -313,64 +313,6 @@ h2 {
   line-height: 1.2;
 }
 
-/* Dropdown Button */
-.dropbtn {
-  width: 100%;
-  background: #233237;
-  color: #eac67a;
-  padding: 3% 5%;
-  margin-top: 3%;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 2.5vw;
-  font-weight: bold;
-  border: none;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background: #984b43;
-}
-
-.dropdown {
-  width: 100%;
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdownContent {
-  display: none;
-  background-color: #eac67a;
-  min-width: 100%;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdownContent li {
-  color: #233237;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdownContent li:hover,
-.dropdownContent li:focus {
-  background-color: #ddd;
-  border: 1 solid #984b43;
-}
-
-li:hover,
-li:focus,
-button:hover,
-button:focus {
-  cursor: pointer;
-}
-
-/* Show the dropdown menu */
-.show {
-  display: block;
-}
-
 header {
   border-bottom: 1px solid #000;
   text-align: center;
@@ -403,6 +345,72 @@ ol {
 
 #playlistResult {
   margin-top: 5%;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  width: 100%;
+  background: #233237;
+  color: #eac67a;
+  padding: 3% 5%;
+  margin-top: 3%;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 2.5vw;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background: #984b43;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdownContent {
+  display: none;
+  background-color: #eac67a;
+  min-width: 100%;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  overflow: auto;
+}
+
+/* Buttons inside the dropdown */
+button.songbtn {
+  min-width: 100%;
+  background-color: #eac67a;
+}
+
+.songbtn p {
+  color: #233237;
+  font-size: 2rem;
+  padding: 12px 16px;
+  font-weight: bold;
+  border: none;
+  margin: 1rem auto;
+}
+
+/* Buttons inside the dropdown on hover & focus */
+button.songbtn:hover,
+button.songbtn:focus {
+  background-color: #ddd;
+  border: 1 solid #984b43;
+  cursor: pointer;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdownContent container when the user clicks on the dropdown button) */
+.show {
+  display: block;
 }
 
 /* Portrait tablet and small desktops */
