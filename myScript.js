@@ -21,167 +21,55 @@ window.onclick = (event) => {
 }
 
 
-// New option - the onclick doesn't close outside the button!!
-// window.onclick = function (event) {
-//     event.preventDefault();
-//     const dropdowns = document.getElementById('myDropdown');
-    
-//         if (!event.target.matches('.dropbtn')) {
-//             dropdowns.toggleClass('show');
-//         } else {
-//             dropdowns.removeClass('show');
-//         }
-//     }
-
-
 /*************************************************************************** */
-    // Audio:
-    // Song #1
-    function rockSong(autoplay) {
-        const playlist = document.createElement("audio");
-        playlist.setAttribute("id", "playlist");
-        playlist.setAttribute("controls", "controls");
+// From helpcue 
+let rock;
+let latinSong;
+let bluesSong;
+let boogieSong;
 
-        const rock = document.createElement("source");
-        rock.setAttribute("src", "./assets/audioFiles/01rock.mp3");
-        rock.setAttribute("type", "audio/mpeg");
-        playlist.appendChild(rock);
-
-        // Set the autoplay property: refactoring jquery
-        playlist.autoplay = autoplay;
-        const clearList = () => {
-            document.getElementById('playlistResult').innerHTML = '';
-        }
-        clearList();
-        document.getElementById('playlistResult').append(playlist);
+function getSong(autoplay, genre, fileName) {
+    const playlist = document.createElement("audio");
+    playlist.setAttribute("id", "playlist");
+    playlist.setAttribute("controls", "controls");
+    
+    genre = document.createElement("source");
+    genre.setAttribute("src", fileName);
+    genre.setAttribute("type", "audio/mpeg");
+    
+    playlist.appendChild(genre);
+    playlist.autoplay = autoplay;
+    
+    const clearList = () => {
+        document.getElementById('playlistResult').innerHTML = '';
     }
+    clearList();
+    document.getElementById('playlistResult').append(playlist);
+}
 
-    // Song #2
-    function latinSong(autoplay) {
-        const playlist = document.createElement("audio");
-        playlist.setAttribute("controls", "controls");
-
-        const latin = document.createElement("source");
-        latin.setAttribute("src", "./assets/audioFiles/02latin.mp3");
-        latin.setAttribute("type", "audio/mpeg");
-        playlist.appendChild(latin);
-
-        playlist.autoplay = autoplay;
-        const clearList = () => {
-            document.getElementById('playlistResult').innerHTML = '';
-        }
-        clearList();
-        document.getElementById('playlistResult').append(playlist);
-    }
-
-    // Song #3
-    function bluesSong(autoplay) {
-        const playlist = document.createElement("audio");
-        playlist.setAttribute("controls", "controls");
-
-        const blues = document.createElement("source");
-        blues.setAttribute("src", "./assets/audioFiles/03blues.mp3");
-        blues.setAttribute("type", "audio/mpeg");
-        playlist.appendChild(blues);
-
-        playlist.autoplay = autoplay;
-        const clearList = () => {
-            document.getElementById('playlistResult').innerHTML = '';
-        }
-        clearList();
-        document.getElementById('playlistResult').append(playlist);
-    }
-
-    // Song #4
-    function boogieSong(autoplay) {
-        const playlist = document.createElement("audio");
-        playlist.setAttribute("controls", "controls");
-
-        const boogie = document.createElement("source");
-        boogie.setAttribute("src", "./assets/audioFiles/04boogie.mp3");
-        boogie.setAttribute("type", "audio/mpeg");
-        playlist.appendChild(boogie);
-
-        playlist.autoplay = autoplay;
-        const clearList = () => {
-            document.getElementById('playlistResult').innerHTML = '';
-        }
-        clearList();
-        document.getElementById('playlistResult').append(playlist);
-    }
 
     // Creates click event on each item of the menu (vanilla):
+const rockBtn = document.getElementById('rock');
+const latinBtn = document.getElementById('latin');
+const bluesBtn = document.getElementById('blues');
+const boogieBtn = document.getElementById('boogie');
 
 const playSong = () => {
-    document.getElementsByClassName('songbtn').onclick 
-    if (document.getElementById('rock') == true) {
-    rockSong();
-    } if (document.getElementById('latin') == true) {
-    latinSong();
-    } if (document.getElementById('blues') == true) {
-        bluesSong();
-    } else {
-        boogieSong();
-    }
+        rockBtn.addEventListener('click', () => {
+            alert('play rock song');
+        });
 }
-    
+playSong();
 
-    // Creates click event on each item of the menu (jQuery):
-    // $('#rock').on('click', function () {
-    //     rockSong(true);
-    // });
 
-    // $('#latin').on('click', function () {
-    //     latinSong(true);
-    // });
 
-    // $('#blues').on('click', function () {
-    //     bluesSong(true);
-    // });
-
-    // $('#boogie').on('click', function () {
-    //     boogieSong(true);
-    // });
-    
-    // Creating array of objects 
-    // const songlist = [rockSong(), latinSong(), bluesSong(), boogieSong()];
-    
-    // for (let i=0; i < songlist.length; i++) {
-    //     if (i == true) {
-        
-    //     }
+    // const rockBtn = document.getElementById('rock');
+    // const latinBtn = document.getElementById('latin');
+    // const bluesBtn = document.getElementById('blues');
+    // const boogieBtn = document.getElementById('boogie');
+    // const playSong = () => {
+    //     rockBtn.addEventListener('click', () => {
+    //         rockSong();
+    //     });
     // }
-    
-    /* 
-    // Create objects for each song
-
-        const rock = {
-            src: "./assets/audioFiles/01rock.mp3"
-        }
-        const latin = {setAttribute("src", "./assets/audioFiles/02latin.mp3")},
-        const blues = setAttribute("src", "./assets/audioFiles/03blues.mp3"),
-        const boogie = setAttribute("src", "./assets/audioFiles/04boogie.mp3")
-    
-
-        const playlist = document.createElement("audio");
-        playlist.setAttribute("controls", "controls");
-        const ?? = document.createElement("source");
-        this.setAttribute("type", "audio/mpeg");
-        playlist.appendChild(rock, latin, blues, boogie);
-
-        // Set the autoplay property:
-        playlist.autoplay = autoplay;
-        const clearList = () => {
-            document.getElementById('playlistResult').innerHTML = '';
-        }
-        clearList();
-        document.getElementById('playlistResult').append(playlist);
-    }
-
-    // Creating a for loop to play the selected audio:
-    
-    */
-    
-    
-    
-
+    // playSong();
