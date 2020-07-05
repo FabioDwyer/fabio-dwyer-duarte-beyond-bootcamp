@@ -20,10 +20,9 @@ window.onclick = (event) => {
     }
 }
 
-
 /*************************************************************************** */
-// From helpcue 
-let rock;
+// AUDIO:
+let rockSong;
 let latinSong;
 let bluesSong;
 let boogieSong;
@@ -57,19 +56,9 @@ const boogieBtn = document.getElementById('boogie');
 const playSong = () => {
         rockBtn.addEventListener('click', () => {
             alert('play rock song');
+            // rockSong(true);
         });
 }
 playSong();
 
 
-
-    // const rockBtn = document.getElementById('rock');
-    // const latinBtn = document.getElementById('latin');
-    // const bluesBtn = document.getElementById('blues');
-    // const boogieBtn = document.getElementById('boogie');
-    // const playSong = () => {
-    //     rockBtn.addEventListener('click', () => {
-    //         rockSong();
-    //     });
-    // }
-    // playSong();
